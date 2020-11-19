@@ -1,14 +1,5 @@
-<?php
-include ("includes/conectar.php");//incluir un archivo
-session_start();
-	if (isset($_REQUEST['verificar'])) {
-	if (!isset($_SESSION['user'])) {
-		echo "<script> alert ('Necesita iniciar sesión para ver esta pagina') </script>";
-		echo "<script> window.open ('iniciar sesion.php', '_self') </script>";
-	}
-}
-?>
-
+/*Conectar a la Base de Datos*/
+conexion realizada exitosamente a Base de Datos
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,15 +44,7 @@ session_start();
 								</ul>
 								<div class="top_bar_login ml-auto">
 									<div class="login_button">
-										<?php
-									if (isset($_SESSION['user'])) {
-									echo"<a href='cuestionario.php?salir=1'>Cerrar Sesion</a>";
-									}
-									else {
-											echo"<a href='iniciar sesion.php'>Registrarse o Iniciar sesion</a>";
-									}
-								?>
-							</div>
+										<a href='iniciar sesion.php'>Registrarse o Iniciar sesion</a>							</div>
 
 
 								</div>
@@ -80,18 +63,18 @@ session_start();
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="logo_container">
-								<a href="index.html">
+								<a href="index.php">
 									<div class="logo_text">AIE-<span><div>LEARNING</div></span></div>
 								</a>
 							</div>
 							<nav class="main_nav_contaner ml-auto">
 								<ul class="main_nav">
-									<li class="active"><a href="index.html">Hogar</a></li>
+									<li class="active"><a href="index.php">Hogar</a></li>
 									<li><a href="about.php">Acerca de</a></li>
 									<li><a href="cursos.php">Cursos</a></li>
 									<li><a href="blog.php">Blog</a></li>
 									<li><a href="comentario2.php">Comentarios</a></li>
-									<li><a href="index.html?verificar=1">Cuestionario</a></li>
+									<li><a href="index.php?verificar=1">Cuestionario</a></li>
 
 
 
@@ -729,7 +712,7 @@ session_start();
 								<!-- Footer About -->
 								<div class="footer_section footer_about">
 									<div class="footer_logo_container">
-										<a href="index.html">
+										<a href="index.php">
 											<div class="footer_logo_text">AIE-<span>Learning</span></div>
 										</a>
 									</div>
